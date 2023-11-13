@@ -1,0 +1,72 @@
+//colors
+$primaryColor: #369FFF;
+$opacityPrimaryColor: rgba(54, 159, 255, 0.10);
+$hoverColor: #0587FE;
+$secondColor: #006ED3;
+$white: #F7F7F7;
+$colorTitle: #303030;
+$colorText: #606060;
+$bgBtn: #EBF5FF;
+
+//fonts
+$btnFont: 'Manrope', sans-serif;
+$titlesFont: 'Roboto Condensed', sans-serif;
+$textFont: 'Roboto', sans-serif;
+$logoFont: 'Audiowide', sans-serif;
+
+//mixins
+@mixin centerTotalFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin widthDefinitionSB {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin widthDefinitionDefault {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    align-items: center;
+}
+
+@mixin widthDefinitionSBMobile {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin widthDefinitionMobile {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+}
+
+//default formatting
+h2, h3 {
+  color: $colorTitle;
+}
+
+h2 {
+  font: normal 700 2.8rem/normal $titlesFont;
+  text-transform: uppercase;
+}
+
+h3 {
+  font: normal 700 1.6rem/normal $textFont;
+}
+
+button {
+  border: none;
+  border-radius: .5rem;
+  background: none;
+}

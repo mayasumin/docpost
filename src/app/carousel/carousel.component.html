@@ -1,0 +1,20 @@
+<section class="benefits">
+  <div class="benefits-container">
+    <div class="animated-mobile">
+      <div class="gif"></div>
+    </div>
+    <div *ngIf="texts && texts.length > 0" class="carousel-container">
+      <div class="carousel-item fade" *ngFor="let text of texts; let i = index" [ngClass]="{'text-active': selectedIndex === i}">
+        <h2>{{text.title}}</h2>
+        <p>{{text.description}}</p>
+      </div>
+      <div *ngIf="indicators" class="carousel-dot-container">
+        <span *ngFor="let dot of texts; let i=index"
+        class="dot"
+        [ngClass]="{'active': selectedIndex === i}"
+        (click)="selectText(i)">
+      </span>
+      </div>
+    </div>
+  </div>
+</section>

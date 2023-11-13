@@ -1,0 +1,63 @@
+<section class="comments">
+  <div class="container-comments">
+    <div class="header-comments">
+      <h2>Veja o que estão dizendo</h2>
+      <p>Confira os depoimentos de alguns dos nossos clientes satisfeitos que contam como nosso sistema ajudou a melhorar a sua gestão financeira, a reduzir os custos e a aumentar sua eficiência.</p>
+    </div>
+    <div class="slider-effectCoverFlow">
+      <swiper
+      [effect]="'coverflow'"
+      [grabCursor]="true"
+      [centeredSlides]="true"
+      [slidesPerView]="'auto'"
+      [coverflowEffect]="{
+        rotate: 0,
+        stretch: 0,
+        depth: 160,
+        modifier: 1,
+        slideShadows: false
+      }"
+      [pagination]="false"
+      [navigation]="true"
+      class="mySwiper"
+      >
+        <ng-template swiperSlide>
+          <div class="card">
+            <h4>Lucas I.</h4>
+            <div class="rate">
+              <div class="img-rate"></div>
+            </div>
+            <p>Eu uso o <span>DocPost</span> há três meses e estou muito satisfeito com o serviço. O app é fácil de usar, rápido e seguro. Eu consigo emitir e enviar os meus boletos pelo celular sem nenhum problema.</p>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="card">
+            <h4>Alex F.</h4>
+            <div class="rate">
+              <div class="img-rate"></div>
+            </div>
+            <p>Eu posso emitir os meus boletos para os meus clientes de forma simples e profissional. O app também me ajuda a controlar os meus recebimentos e a evitar a inadimplência. Eu gosto muito da função de notificações e lembretes, que me avisa quando os meus boletos estão vencendo ou pagos.</p>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="card">
+            <h4>Ana C.</h4>
+            <div class="rate">
+              <div class="img-rate"></div>
+            </div>
+            <p>Eu sou cliente do <span>DocPost</span> há um ano e recentemente baixei o app para o meu celular. Eu achei o app muito bom, pois ele tem todas as funcionalidades do sistema online. Eu posso consultar os meus boletos pelo app.</p>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="card">
+            <h4>Emerson E.</h4>
+            <div class="rate">
+              <div class="img-rate"></div>
+            </div>
+            <p>Eu adoro o <span>DocPost</span>, pois ele facilita muito a minha vida financeira. Eu posso emitir e receber os meus boletos pelo app com poucos cliques. O app também me permite gerenciar os meus clientes e fornecedores.</p>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+</section>

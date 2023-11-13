@@ -1,0 +1,138 @@
+@import '../../styles.scss';
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  .benefits-container {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    justify-content: center;
+    gap: 25rem;
+    padding: 5rem;
+    border-radius: 1.6875rem;
+    background-color: $opacityPrimaryColor;
+    box-shadow: -0.0625rem -0.0625rem .8125rem 0rem rgba(0, 0, 0, 0.20);
+    .animated-mobile {
+      .gif {
+        background: url("../../assets/images/animated-mobile.gif") no-repeat center center;
+        background-size: cover;
+        width: 21.8rem;
+        height: 43.7rem;
+      }
+    }
+    .carousel-container {
+      position: relative;
+      width: 52rem;
+      padding-top: 3%;
+      .carousel-item {
+        display: none;
+        &.text-active {
+          display: block;
+          padding-left: 8rem;
+        }
+        p {
+          font: normal 400 2rem/170% $titlesFont;
+          margin-top: 3rem;
+          letter-spacing: .15rem;
+          color: $colorText;
+        }
+      }
+    }
+      .carousel-dot-container {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin-bottom: 5rem;
+      .dot {
+        cursor: pointer;
+        height: .625rem;
+        width: .625rem;
+        margin: 1rem;
+        background-color: $primaryColor;
+        border-radius: 50%;
+        display: inline-block;
+        transition: opacity 0.6s ease;
+        opacity: 0.5;
+        &.active, &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .fade {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.8;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .benefits {
+    .benefits-container {
+      max-width: 760px;
+      gap: 3rem;
+      padding: 2rem;
+      .animated-mobile {
+        img {
+          width: 18.8rem;
+          height: 40.7rem;
+        }
+      }
+    }
+    .carousel-container {
+      width: 10rem;
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media(max-width: 430px) {
+  .benefits {
+    .benefits-container {
+      max-width: 420px;
+      flex-direction: column-reverse;
+      align-items: center;
+      .animated-mobile {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .carousel-container {
+        width: 100%;
+        height: 30rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        .carousel-item {
+          &.text-active {
+            padding-left: 0;
+          }
+          h2 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

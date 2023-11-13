@@ -1,0 +1,114 @@
+@import "../../../styles.scss";
+
+.services {
+  display: flex;
+  justify-content: center;
+  .container-services {
+    @include widthDefinitionSB;
+    .text {
+      width: 54.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      p {
+        font: normal 400 2rem/170% $titlesFont;
+      }
+    }
+    .container-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      width: 42rem;
+      .card {
+        width: 20rem;
+        height: 18rem;
+        padding: 1.62rem;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 11.14403px -2.78601px rgba(0, 0, 0, 0.30);
+        span {
+          font: normal 400 1.4rem/normal $textFont;
+          color: $colorTitle;
+        }
+        .symbol {
+          .symbol-img {
+            width: 4.1rem;
+            height: 4.1rem;
+            background-size: cover;
+          }
+        }
+        &#planning {
+          .symbol {
+            .symbol-img {
+              background: url("../../../assets/images/clipboard.svg") no-repeat center center;
+            }
+          }
+        }
+        &#confirmation {
+          .symbol {
+            .symbol-img {
+              background: url("../../../assets/images/done-outline.svg") no-repeat center center;
+            }
+          }
+        }
+        &.reports {
+          .symbol {
+            .symbol-img {
+              background: url("../../../assets/images/grafic.svg") no-repeat center center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .services {
+    .container-services {
+      flex-direction: column;
+      justify-content: center;
+      gap: 4rem;
+      .text {
+        width: 100%;
+      }
+      .container-cards {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media(max-width: 430px)  {
+  .services {
+    .container-services {
+      @include widthDefinitionMobile;
+      flex-direction: column;
+      justify-self: center;
+      gap: 1rem;
+      .text {
+        gap: 1rem;
+        width: 100%;
+        h2 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+      }
+      .container-cards {
+        width: 100%;
+        .card {
+          width: 17rem;
+          height: 18rem;
+          h3 {
+            font-size: 1.5rem;
+          }
+          span {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

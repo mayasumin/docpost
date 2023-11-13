@@ -1,0 +1,28 @@
+<section class="faq">
+  <div class="container-faq">
+    <div class="container-header">
+      <h2>Dúvidas frequentes</h2>
+      <p>Confira os depoimentos de alguns dos nossos clientes satisfeitos que contam como nosso sistema ajudou a melhorar a sua gestão financeira, a reduzir os custos e a aumentar sua eficiência.</p>
+    </div>
+    <div class="questions">
+      <div class="question">
+        <button (click)="showFirstAnswer=!showFirstAnswer" [ngClass]="{'active' : showFirstAnswer === true}">
+          <span>Preciso assinar contrato de fidelidade?</span>
+        </button>
+        <p class="answer" *ngIf="showFirstAnswer">Não! Você pode cancelar a hora que quiser e sem custo adicional nenhum. E se decidir voltar a futuramente, sua conta estará exatamente como você deixou.</p>
+      </div>
+      <div class="question">
+        <button (click)="showSecondAnswer=!showSecondAnswer" [ngClass]="{'active' : showSecondAnswer === true}">
+          <span>Quanto custa a mensalidade?</span>
+        </button>
+        <p class="answer" *ngIf="showSecondAnswer">Não! Você pode cancelar a hora que quiser e sem custo adicional nenhum. E se decidir voltar a futuramente, sua conta estará exatamente como você deixou.</p>
+      </div>
+      <div class="question">
+        <button (click)="showThirdAnswer=!showThirdAnswer" [ngClass]="{'active' : showThirdAnswer === true}">
+          <span>O DocPost é seguro?</span>
+        </button>
+        <p class="answer" *ngIf="showThirdAnswer">Não! Você pode cancelar a hora que quiser e sem custo adicional nenhum. E se decidir voltar a futuramente, sua conta estará exatamente como você deixou.</p>
+      </div>
+    </div>
+  </div>
+</section>
